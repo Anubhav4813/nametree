@@ -1,0 +1,23 @@
+{
+  "name": "nametree",
+  "version": "1.0.0",
+  "description": "An algorithm that creates unique identifiers using rules, patterns and randomness.",
+  "homepage": "https://github.com/Anubhav4813/nametree#readme",
+  "bugs": {
+    "url": "https://github.com/Anubhav4813/nametree/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anubhav4813/nametree.git"
+  },
+  "license": "ISC",
+  "author": "Anubhav",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
