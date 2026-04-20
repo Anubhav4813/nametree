@@ -59,7 +59,8 @@ The name generator uses a combination of:
 ## Author
 
 **Anubhav Gahlawat**  
-[GitHub](https://github.com/Anubhav4813) · [LinkedIn](https://linkedin.com/in/anubhav-gahlawat-3a5376373)
+[GitHub](https://github.com/Anubhav4813) · [LinkedIn](https://linkedin.com/in/anubhav-gahlawat-3a5376373) · [Link](https://nametree.onrender.com/)
+
 
 ## License
 
