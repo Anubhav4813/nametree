@@ -20,12 +20,24 @@ form.addEventListener('submit', async (event) => {
 
         const data = await response.json();
 
-        if(!response.ok) {
+        if (!response.ok) {
             result.textContent = data.error || 'Something went wrong';
             return;
         }
 
-        result.textContent = data.username;
+        result.innerHTML = '';
+
+        const list = document.createElement('ul');
+        list.className = 'username-list';
+
+        data.usernames.forEach((username) => {
+            const item = document.createElement('li');
+            item.className = 'username-item';
+            item.textContent = username;
+            list.appendChild(item);
+        });
+
+        result.appendChild(list);
     } catch (error) {
         result.textContent = 'Server error';
     }

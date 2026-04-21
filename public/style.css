@@ -114,3 +114,29 @@ button:hover {
     color: #14532d;
     word-break: break-word;
 }
+
+.username-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.username-item {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #d1fae5;
+    color: #14532d;
+    font-size: 1rem;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.result-val {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #14532d;
+    word-break: break-word;
+}

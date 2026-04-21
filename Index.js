@@ -15,12 +15,13 @@ app.get('/', (req, res) => {
 
 app.post('/generate', (req, res) => {
     const name = req.body.name?.trim();
-    const python = spawn('python', ['name_generator.py', name]);
 
-    if(!name) {
+    if (!name) {
         return res.status(400).json({ error: 'Name is required' });
     }
-    
+
+    const python = spawn('python', ['name_generator.py', name]);
+
     let output = '';
     let errorOutput = '';
 
@@ -33,13 +34,18 @@ app.post('/generate', (req, res) => {
     });
 
     python.on('close', (code) => {
-        if(code !== 0) {
-            return res.status(500).json({ 
+        if (code !== 0) {
+            return res.status(500).json({
                 error: errorOutput || 'Failed to generate username',
             });
         }
 
-        res.json({ username : output.trim() });
+        const usernames = output
+            .split('\n')
+            .map((line) => line.trim())
+            .filter(Boolean);
+
+        res.json({ usernames });
     });
 });
 
